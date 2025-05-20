@@ -1,0 +1,6 @@
+/* To make sure this applies to the whole html page */
+html{
+    font-size:20px;
+    background : url('./Arctic-Monkeys.jpg') bottom center;
+    background-size: contain;
+}
