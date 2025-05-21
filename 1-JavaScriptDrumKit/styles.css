@@ -1,6 +1,77 @@
-/* To make sure this applies to the whole html page */
 html{
     font-size:20px;
     background : url('./Arctic-Monkeys.jpg') bottom center;
-    background-size: contain;
+    background-size: 50%;
+    background-position-x:70% ;
+    background-position-y: -80%;
+}
+html,body{
+    
+    font-family: 'sans-serif';
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* height:100vh; */
+    overflow: hidden;
+     padding: 0px;
+    margin: 0px;
+    
+   
+    
+}
+.container{
+    
+    background-color: rgba(236, 236, 236, 0.281);
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    /* opacity: 20%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+.keys{
+    display:grid;
+    /* position:absolute; */
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 300px 300px 300px;
+    min-height:100vh;   
+    margin-top: 18%;
+    
+}
+.key{
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* opacity: 100%; */
+}
+kbd{
+    display:block;
+    font-size:4rem;
+}
+.sound{
+    font-size:1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color:#ffc600
+}
+.playing{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
 }
