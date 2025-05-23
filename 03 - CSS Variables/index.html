@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scoped CSS Variables and JS</title>
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
@@ -19,10 +20,22 @@
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" >
 
   <style>
-
+    :root{
+      --base:red;
+      --spacing:10px;
+      --blur:10px;
+    }
+    img{
+      padding: var(--spacing);
+      background:var(--base);
+      filter:blur(var(--blur));
+    }
+    .hl{
+      color:var(--base);
+    }
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -46,6 +59,14 @@
   </style>
 
   <script>
+    let inputs = document.querySelectorAll('.controls input');
+    function handleUpdate(){
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+    
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
   </script>
 
 </body>

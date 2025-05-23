@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript30 Project Launcher</title>
+  <link rel="icon" href="https://fav.farm/🔥"/>
+  <style>
+    :root {
+      --bg: #161616;
+      --card-bg: #242424;
+      --accent: #ffc600;
+      --text: #fff;
+      --shadow: 0 6px 18px rgba(0,0,0,0.35);
+      --radius: 18px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 8px;
+    }
+
+    h1 {
+      margin: 40px 0 32px 0;
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-align: center;
+      color: var(--accent);
+      text-shadow: 0 2px 24px #0007;
+      transition: color 0.3s;
+    }
+
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 36px 26px;
+      width: 180px;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.16s, box-shadow 0.16s, background 0.2s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .project-card:hover, .project-card:focus {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 14px 32px rgba(255,198,0,0.18), var(--shadow);
+      background: #1d1d1d;
+      color: var(--accent);
+      outline: none;
+    }
+
+    .project-number {
+      position: absolute;
+      top: 12px;
+      left: 18px;
+      color: var(--accent);
+      font-size: 0.9em;
+      opacity: 0.65;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      user-select: none;
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 2rem; }
+      .projects-grid {
+        gap: 1rem;
+        max-width: 98vw;
+      }
+      .project-card {
+        padding: 22px 10px;
+        width: 44vw;
+        min-width: 135px;
+        font-size: 1rem;
+      }
+    }
+    @media (max-width: 450px) {
+      .project-card {
+        width: 96vw;
+        min-width: unset;
+        padding: 14px 6px;
+        font-size: .99rem;
+      }
+      .projects-grid { gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript30</h1>
+  <div class="projects-grid" id="projectsGrid">
+    <a class="project-card" href="https://your-deploy-url/01-drum-kit" ><span class="project-number">1</span>Drum Kit</a>
+    <a class="project-card" href="https://your-deploy-url/02-clock" ><span class="project-number">2</span>Clock</a>
+    <a class="project-card" href="https://your-deploy-url/03-blur-photo" ><span class="project-number">3</span>Blur Photo</a>
+    <a class="project-card" href="https://your-deploy-url/04-array-1" ><span class="project-number">4</span>Array I</a>
+    <a class="project-card" href="https://your-deploy-url/05-flex-animation" ><span class="project-number">5</span>Flex Animation</a>
+    <a class="project-card" href="https://your-deploy-url/06-search-city" ><span class="project-number">6</span>Search City</a>
+    <a class="project-card" href="https://your-deploy-url/07-array-2" ><span class="project-number">7</span>Array II</a>
+    <a class="project-card" href="https://your-deploy-url/08-html-canvas" ><span class="project-number">8</span>HTML Canvas</a>
+    <a class="project-card" href="https://your-deploy-url/09-tools-you-must-know" ><span class="project-number">9</span>Tools You Must Know</a>
+    <a class="project-card" href="https://your-deploy-url/10-shift-select" ><span class="project-number">10</span>Shift Select</a>
+    <a class="project-card" href="https://your-deploy-url/11-video-player" ><span class="project-number">11</span>Video Player</a>
+    <a class="project-card" href="https://your-deploy-url/12-key-sequence" ><span class="project-number">12</span>Key Sequence</a>
+    <a class="project-card" href="https://your-deploy-url/13-slide-in-animation" ><span class="project-number">13</span>Slide In Animation</a>
+    <a class="project-card" href="https://your-deploy-url/14-object-copy-reference" ><span class="project-number">14</span>Object Copy/Reference</a>
+    <a class="project-card" href="https://your-deploy-url/15-localstorage-event-delegation" ><span class="project-number">15</span>LocalStorage & Event Delegation</a>
+    <a class="project-card" href="https://your-deploy-url/16-mouse-move-effect" ><span class="project-number">16</span>Mouse Move Effect</a>
+    <a class="project-card" href="https://your-deploy-url/17-sort-without-articles" ><span class="project-number">17</span>Sort Without Articles</a>
+    <a class="project-card" href="https://your-deploy-url/18-add-remove-classes" ><span class="project-number">18</span>Add/Remove Classes</a>
+    <a class="project-card" href="https://your-deploy-url/19-webcam-fun" ><span class="project-number">19</span>Webcam Fun</a>
+    <a class="project-card" href="https://your-deploy-url/20-speech-detection" ><span class="project-number">20</span>Speech Detection</a>
+    <a class="project-card" href="https://your-deploy-url/21-geolocation" ><span class="project-number">21</span>Geolocation</a>
+    <a class="project-card" href="https://your-deploy-url/22-follow-along-link-highlighter" ><span class="project-number">22</span>Follow Along Link Highlighter</a>
+    <a class="project-card" href="https://your-deploy-url/23-speech-synthesis" ><span class="project-number">23</span>Speech Synthesis</a>
+    <a class="project-card" href="https://your-deploy-url/24-sticky-nav" ><span class="project-number">24</span>Sticky Nav</a>
+    <a class="project-card" href="https://your-deploy-url/25-event-capture-propagation-bubbling-once" ><span class="project-number">25</span>Event Capture/Propagation/Bubbling/Once</a>
+    <a class="project-card" href="https://your-deploy-url/26-stripe-follow-along-nav" ><span class="project-number">26</span>Stripe Follow Along Nav</a>
+    <a class="project-card" href="https://your-deploy-url/27-click-drag" ><span class="project-number">27</span>Click and Drag</a>
+    <a class="project-card" href="https://your-deploy-url/28-video-speed-controller" ><span class="project-number">28</span>Video Speed Controller</a>
+    <a class="project-card" href="https://your-deploy-url/29-countdown-timer" ><span class="project-number">29</span>Countdown Timer</a>
+    <a class="project-card" href="https://your-deploy-url/30-whack-a-mole" ><span class="project-number">30</span>Whack-a-Mole!</a>
+  </div>
+
+  <script>
+    // Open every project in a new tab, even if user left-clicks
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(this.href, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>
