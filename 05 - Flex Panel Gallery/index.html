@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flex Panels 💪</title>
+  <title>🎸 Rock Band Panels 🤘</title>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
   <link rel="icon" href="https://fav.farm/✅" />
 </head>
@@ -10,7 +10,7 @@
   <style>
     html {
       box-sizing: border-box;
-      background: #ffc600;
+      background: #000;
       font-family: 'helvetica neue';
       font-size: 20px;
       font-weight: 200;
@@ -36,8 +36,6 @@
       color: white;
       text-align: center;
       align-items: center;
-      /* Safari transitionend event.propertyName === flex */
-      /* Chrome + FF transitionend event.propertyName === flex-grow */
       transition:
         font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
         flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
@@ -52,12 +50,11 @@
     }
 
     .panel1 { background-image:url(https://media.gettyimages.com/id/1210091603/photo/nirvana-in-japan.jpg?s=612x612&w=gi&k=20&c=JB0mINe2iVe017tXCEJxA0blDsd_yQRMV0zNp_JucJ0=); }
-    .panel2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
-    .panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-    .panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
-    .panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+    .panel2 { background-image:url(https://media.gettyimages.com/id/1500981433/photo/glastonbury-festival-2023-day-3.jpg?s=612x612&w=gi&k=20&c=LjLFHTwej3Mp-3w62irCO_y-nluGTBtEnSgbFqQyGxs=); }
+    .panel3 { background-image:url(https://hd.wallpaperswide.com/thumbs/linkin_park_5-t2.jpg); }
+    .panel4 { background-image:url(https://i.ytimg.com/vi/TllvFtkXMBE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB2dKmtKD8vpELv06cUOyPN-cUGhA); }
+    .panel5 { background-image:url(https://www.rollingstone.com/wp-content/uploads/2018/06/eagles-bw2-courtesy-of-elektra-asylum-records-d459ff75-14b4-48bc-afc4-c9b6b89781f0.jpg?w=1581&h=1054&crop=1); }
 
-    /* Flex Items */
     .panel > * {
       margin: 0;
       width: 100%;
@@ -76,12 +73,13 @@
     .panel p {
       text-transform: uppercase;
       font-family: 'Amatic SC', cursive;
-      text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 0 4px rgba(255, 0, 0, 0.72), 0 0 14px rgba(255, 0, 0, 0.45);
       font-size: 2em;
     }
 
     .panel p:nth-child(2) {
       font-size: 4em;
+      color: #ff0000;
     }
 
     .panel.open {
@@ -99,36 +97,36 @@
 
   <div class="panels">
     <div class="panel panel1">
-      <p>Hey</p>
-      <p>Let's</p>
-      <p>Dance</p>
+      <p>Smells</p>  
+      <p>Like</p>
+      <p>Teen Spirit</p>
     </div>
     <div class="panel panel2">
-      <p>Give</p>
-      <p>Take</p>
-      <p>Receive</p>
+      <p>Crawling</p>
+      <p>Back</p>  
+      <p>To You</p>
     </div>
     <div class="panel panel3">
-      <p>Experience</p>
-      <p>It</p>
-      <p>Today</p>
+      <p>I've</p>
+      <p>Become</p>
+      <p>So Numb</p>
     </div>
     <div class="panel panel4">
-      <p>Give</p>
-      <p>All</p>
-      <p>You can</p>
+      <p>Rock You</p>
+      <p>Like</p>
+      <p>A Hurricane</p>  
     </div>
     <div class="panel panel5">
-      <p>Life</p>
-      <p>In</p>
-      <p>Motion</p>
+      <p>Welcome To</p>
+      <p>The</p>
+      <p>Hotel California</p>
     </div>
   </div>
 
   <script>
     const panels = document.querySelectorAll('.panel');
 
-    function toggleOpen() {
+    function toggleOpen() { 
       console.log('Hello');
       this.classList.toggle('open');
     }
