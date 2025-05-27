@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Webcam Photobooth</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+  <div class="photobooth">
+    <div class="current-effect">
+      Mode: <span id="effectName">Normal</span>
+    </div>
+    <video class="player" autoplay muted></video>
+    <canvas class="photo"></canvas>
+    <div class="controls-row">
+      <button class="action-btn photo-btn" onclick="takePhoto()">📸 Take Photo</button>
+      <button class="action-btn effect-toggle" onclick="toggleEffect()">🎨 Toggle Effect</button>
+    </div>
+    <div class="strip"></div>
+  </div>
+  <audio class="snap" src="./snap.mp3" hidden></audio>
+  <script src="scripts.js"></script>
+</body>
+</html>

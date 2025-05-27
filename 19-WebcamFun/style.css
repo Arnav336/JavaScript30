@@ -1,0 +1,112 @@
+ 
+    html {
+      box-sizing: border-box;
+      font-size: 10px;
+      background: #ffc600;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #ffc600;
+    }
+    .photobooth {
+      background: white;
+      max-width: 90vw;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      padding: 2rem 2rem 1rem 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .current-effect {
+      font-size: 1.5rem;
+      color: #444;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+    }
+    .photo {
+      width: 70vw;
+      max-width: 950px;
+      min-width: 320px;
+      background: #111;
+      border-radius: 5px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+      display: block;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+    }
+    .controls-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin: 2.5rem 0 0.7rem 0;
+    }
+    .action-btn {
+      padding: 0.9rem 2.2rem;
+      font-size: 1.6rem;
+      background: #ff4e4e;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.18s, transform 0.12s;
+      letter-spacing: 0.02em;
+    }
+    .action-btn:active {
+      background: #ba2020;
+      transform: scale(0.97);
+    }
+    .action-btn:hover {
+      background: #ff2a2a;
+    }
+    .action-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .action-btn:disabled:hover {
+      background: #ccc;
+    }
+    .photo-btn {
+      background: #17c27c;
+    }
+    .photo-btn:active {
+      background: #098d51;
+    }
+    .player {
+      display: none;
+    }
+    .strip {
+      padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100px;
+      border-top: 1px solid #eee;
+      margin-top: 1.2rem;
+    }
+    .strip img {
+      width: 80px;
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.18);
+      background: white;
+      margin-bottom: 0.5rem;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .photo { width: 98vw; max-width: 99vw;}
+      .controls-row { flex-direction: column; gap: 1rem;}
+    }
