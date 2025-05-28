@@ -35,14 +35,15 @@ a {
 .highlight {
   transition: all 0.2s;
   border-bottom: 2px solid white;
+  border-color: blueviolet;
   position: absolute;
   top: 0;
-  background: white;
+  background: rgba(247, 4, 255, 0.8);
   left: 0;
   z-index: -1;
   border-radius: 20px;
   display: block;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgb(80, 13, 187);
 }
 
 .menu {
