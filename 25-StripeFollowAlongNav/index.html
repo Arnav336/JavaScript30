@@ -226,10 +226,13 @@
   const nav=document.querySelector('.top');
 
   function handleEnter(){
+    console.log('enter')
   }
   function handleLeave(){
-
+    console.log('leave')
   }
+  triggers.addEventListener('mouseenter',handleEnter)
+  triggers.addEventListener('mouseout',handleLeave)
   
 </script>
 
